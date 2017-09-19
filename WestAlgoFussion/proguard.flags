@@ -1,0 +1,27 @@
+
+# ctors of subclasses of CameraPreference are called with Java reflection.
+#-keep class * extends com.android.camera.CameraPreference {
+#  <init>(...);
+#}
+
+#-keep class com.android.camera.CameraActivity {
+#
+#}
+
+#-keep class com.android.camera.manager.CameraHolder {
+#
+#}
+
+# Disable the warnings of using dynamic method calls in EffectsRecorder
+#-dontnote 
+
+# For unit testing:
+
+# - Required for running exif tests on userdebug
+#-keep class com.android.gallery3d.exif.ExifTag { *; }
+#-keep class com.android.gallery3d.exif.ExifData { *; }
+#-keep class com.android.gallery3d.exif.ExifInterface { *; }
+#-keepclassmembers class com.android.gallery3d.exif.Util {
+#  *** closeSilently(...);
+#}
+

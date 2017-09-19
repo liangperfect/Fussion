@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verify_result_framelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e0000000"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/verify_result_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:focusable="false"
+            android:text="@string/verify_result_title"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+        <ListView
+            android:id="@+id/verify_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#80ffffff"
+            android:dividerHeight="1px" />
+        <!-- android:divider="#000000" -->
+        <Button
+            android:id="@+id/verify_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/verify_next_test"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</FrameLayout>

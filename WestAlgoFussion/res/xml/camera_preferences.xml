@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pref_category_resolution_quality" >
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_user_selected_aspect_ratio_back"
+            android:title="@string/pref_camera_back" />
+        <!--<com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_user_selected_aspect_ratio_front"
+            android:title="@string/pref_camera_front" />-->
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_user_selected_subcamera_image_format"
+            android:title="@string/pref_subcamera_image_format" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_advanced" >
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_camera_ae_key"
+            android:title="@string/pref_camera_ae" />
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:key="pref_camera_frame_key"
+            android:title="@string/pref_camera_frame" />
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="true"
+            android:key="pref_camera_zsl_key"
+            android:title="@string/pref_camera_zsl" />
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="pref_camera_af_key"
+            android:title="@string/pref_camera_af" />
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="pref_camera_saf_key"
+            android:title="@string/pref_camera_saf" />
+        <com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="false"
+            android:enabled="false"
+            android:key="pref_camera_ois_key"
+            android:title="@string/pref_camera_ois" />
+        <!--<com.westalgo.factorycamera.settings.ManagedSwitchPreference
+            android:defaultValue="true"
+            android:key="pref_camera_nature_correction_key"
+            android:title="@string/pref_camera_nature_correction" />-->
+
+        <ListPreference
+            android:key="pref_camera_correction_key"
+            android:title="@string/pref_camera_correction"
+            android:entries="@array/pref_correction_entries"
+            android:entryValues="@array/pref_correction_value"
+            android:dialogTitle="@string/pref_camera_correction_title"
+            android:defaultValue="2"
+            android:summary="@string/pref_camera_correction_0" />
+    </PreferenceCategory>
+
+    <!-- Version info - launches activity -->
+    <PreferenceScreen android:key="version_info"
+        android:title="@string/version_info"
+        android:summary="@string/version_info_summary">
+        <intent android:action="android.intent.action.MAIN"
+            android:targetPackage="com.westalgo.factorycamera"
+            android:targetClass="com.westalgo.factorycamera.settings.VersionInfo" />
+    </PreferenceScreen>
+</PreferenceScreen>
